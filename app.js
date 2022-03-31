@@ -9,12 +9,17 @@ document.body.innerHTML = document.body.innerHTML.replaceAll(/software engineer/
 document.body.innerHTML = document.body.innerHTML.replaceAll(/immersive/gi, 'Juicy Puff');
 document.body.innerHTML = document.body.innerHTML.replaceAll(/coding/gi, 'Underwater Basket-Weaving');
 
-setTimeout(popUp(), 10000000000000000000000000);
+window.onscroll = function() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // you're at the bottom of the page
+        popUp();
+    }
+};
 
 function popUp () {
   const response = window.confirm("You've won a free Codesmith Underwater Basket Weaving class.  Click continue OK to accept!");
     if(response) {
-      window.open("https://youtu.be/dQw4w9WgXcQ?t=42");
+      window.open("https://youtu.be/dQw4w9WgXcQ?t=43");
   };
 }
 
